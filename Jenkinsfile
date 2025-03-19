@@ -8,7 +8,7 @@ pipeline{
     stages{
         stage('Checkout Code') {
             steps {
-                git 'https://github.com/arsalan1722/Siemensexam.git'
+                git branch: 'main', 'https://github.com/arsalan1722/Siemensexam.git'
             }
         }
 
