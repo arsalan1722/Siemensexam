@@ -14,7 +14,7 @@ resource "aws_security_group" "lambda_sg" {
 
 resource "aws_lambda_function" "api_lambda" {
   function_name = "invoke-api-lambda"
-  role          = "arn:aws:iam::DevOps-Candidate-Lambda-Role"
+  role          = "arn:aws:iam::DevOps-Candidate-Lambda-Role/LambdaRole"
   handler       = "lambda_function.lambda_handler"
   runtime       = "python3.11"
   filename      = "lambda.zip"
