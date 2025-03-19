@@ -1,3 +1,8 @@
 data "aws_vpc" "selected" {
-  default = true
+       filter{
+          name = "tag:name"
+          values = ["DevOps-Candidate-Lambda-Role"]
+         
+         }
+       
 }
