@@ -4,14 +4,15 @@ pipeline{
      environment {
         AWS_REGION = 'ap-south-1'
            }
-    stages {
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/arsalan1722/Siemensexam.git' 
-            }
-        }
     
     stages{
+ 
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/arsalan1722/Siemensexam.git'
+            }
+        }
+
         stage("TF Init"){
             steps{
                 echo "Executing Terraform Init"
