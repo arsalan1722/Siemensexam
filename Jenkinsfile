@@ -26,6 +26,7 @@ pipeline{
         stage("TF Plan"){
             steps{
                 echo "Executing Terraform Plan"
+                sh 'terraform plan -out=tfplan'
             }
         }
         stage("TF Apply"){
